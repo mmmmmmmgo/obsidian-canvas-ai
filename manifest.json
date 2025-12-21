@@ -4,7 +4,7 @@
 	"description": "A powerful Obsidian plugin that provides a solid foundation for kickstarting your Canvas projects with Obsidian.",
 	"author": "eightHundrends",
 	"authorUrl": "https://github.com/eightHundrends",
-	"version": "1.0.7",
+	"version": "1.1.0",
 	"minAppVersion": "0.15.0",
 	"isDesktopOnly": false
 }
