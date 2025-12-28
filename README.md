@@ -14,7 +14,8 @@
 - ✅ **模型管理**：支持多个 OpenAI 兼容模型，灵活切换和管理
 - ✅ **本地优先**：所有数据存储在本地，保护隐私，无需外部后端服务
 - [ ] **图像生成**：使用 AI 模型生成图片并自动插入到 Canvas
-- [ ] **移动端支持**：xxx
+- [ ] **移动端支持**：在移动端也能使用 Canvas AI(现在也能用就是没测过)
+
 ---
 
 <div style="font-size: 0.5em; color: var(--text-faint); padding: 0.5em 0;">
@@ -158,6 +159,60 @@ in progress...
 
 在节点中引用其他笔记，AI 会自动展开引用内容作为上下文，基于完整上下文生成相关内容。
 
+
+## 开发环境设置
+
+### 安装依赖
+
+```bash
+bun install
+```
+
+### 设置 Git Hooks
+
+项目使用 `simple-git-hooks` 管理 Git hooks，在提交代码前自动运行代码检查和格式化。
+
+首次克隆项目后，运行以下命令安装 hooks：
+
+```bash
+bun run postinstall
+```
+
+或者手动运行：
+
+```bash
+npx simple-git-hooks
+```
+
+### 代码检查
+
+在提交代码前，pre-commit hook 会自动运行以下检查：
+
+- **Lint 检查**：使用 Biome 进行代码检查
+- **格式化检查**：使用 Biome 进行代码格式化
+
+你也可以手动运行：
+
+```bash
+# 运行 lint 检查
+bun run lint
+
+# 运行格式化
+bun run format
+
+# 运行类型检查
+bun run check
+```
+
+### 开发模式
+
+```bash
+# 启动开发模式（监听文件变化）
+bun run dev
+
+# 构建生产版本
+bun run build
+```
 
 ## 赏饭
 
